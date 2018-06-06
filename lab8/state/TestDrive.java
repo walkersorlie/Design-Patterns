@@ -1,22 +1,28 @@
 
 public class TestDrive {
 	public static void main(String[] args) {
-		
-		RemoteDevice remote = new RemoteDevice();
-		State state = remote.getPlayingState();
 
+		RemoteDevice remote = new RemoteDevice();
+		State state = remote.getStoppedState();
 		remote.setState(state);
+
 		remote.pressPlay();
 
-		state = remote.getPausedState();
-		remote.setState(state);
+		// remote.lockDevice();
+
 		remote.pressPause();
 
-		state = remote.getStoppedState();
-		remote.setState(state);
+		remote.unlockDevice();
+		System.out.println(remote.)
 		remote.pressStop();
 
 		remote.pressRewind();
+
+		remote.pressStop();
+
+		remote.pressPlay();
+
+		remote.pressStop();
 
 	}
 

@@ -6,7 +6,7 @@
 
 public class Playing implements State {
 	private RemoteDevice remote;
-	
+
 	public Playing(RemoteDevice remote) {
 		this.remote = remote;
 	}
@@ -14,7 +14,7 @@ public class Playing implements State {
 	// the Play button is pressed
 	public boolean pressPlay() {
 		System.out.println("The player is already playing.");
-		
+
 		return false;
 	}
 
@@ -22,7 +22,7 @@ public class Playing implements State {
 	public boolean pressPause() {
 		System.out.println("The player is paused.");
 		remote.setState(remote.getPausedState());
-		
+
 		return true;
 	}
 
@@ -33,6 +33,12 @@ public class Playing implements State {
 		remote.setPosition(0);
 
 		return true;
+	}
+
+	public boolean pressRewind() {
+		System.out.println("Can only rewind while stopped");
+
+		return false;
 	}
 
 }
