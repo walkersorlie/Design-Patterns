@@ -29,8 +29,8 @@ public class Playing implements State {
 	// the Stop button is pressed
 	public boolean pressStop() {
 		System.out.println("The player is stopped.");
-		remote.setState(remote.getPlayingState());
-		remote.setPosition(0);
+		remote.setState(remote.getStoppedState());
+		// remote.setPosition(0);
 
 		return true;
 	}
